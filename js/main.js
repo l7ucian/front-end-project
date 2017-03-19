@@ -1,1 +1,1 @@
-angular.module('office');
+var app = angular.module('office',[]);
