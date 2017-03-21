@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'NeoSans'; 
+    src: url('./fonts/neo-sans-light.ttf'); 
+}
+
 html {
     height: 100%;
 }
 body {
+  font-family: 'NeoSans';
   width: 90%;
   min-width: 320px;
   margin: 0 auto;
@@ -19,14 +25,12 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 body{
     background-image: url('./img/background.png');
     height: 100%;
-    min-width: 300px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 .container{
     background-image: url('./img/inner-background.png');
     margin : auto;
-    width:68%;
+    width:65.3%;
     height: 100%;
     padding-left: 1.5%;
     padding-right: 1.5%;
@@ -65,7 +69,7 @@ input{
 form{
     width: 100%;
     float: right;
-    border: 1px solid black;
+    <!--border: 1px solid black;-->
 }
 .logo{
     display: block;
@@ -102,14 +106,14 @@ form{
   display: block;
   background-color:  white; 
   width: 100%;
-  height:45%;
+  height:15%;
 }
 .login{
         float: right;
        background-color: white;
         width: 50%;
-        height: 40%;
-        border: 1px solid blue;
+        height: 28%;
+        <!--border: 1px solid blue;-->
 }
 
 .GO-button{
@@ -126,13 +130,13 @@ form{
     width: 50%;
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    <!--border: 1px solid red;-->
 }
 .GO {
     width: 39%;
     float: left;
     padding: 15px;
-    border: 1px solid red;
+    <!--border: 1px solid red;-->
 }
 .lock{
     float: left;
@@ -145,4 +149,19 @@ input[type="email"],input[type="password"], textarea {
   background-color : #CCCCCC; 
 
 }
+    .more{
+        font-family: Arial;
+        color: #53b8c4;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+    }
+    .article{
+        font-family: NeoSans;
+        color: #666666;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 16px;
+    }
 }
