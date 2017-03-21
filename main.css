@@ -3,10 +3,19 @@ html {
 }
 body {
   width: 90%;
-  min-width: 300px;
+  min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+* {
+    box-sizing: border-box;
+}
+/*IE and FF compatibility for placeholders*/
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
 @media only screen and (min-width: 1024px) {
 body{
     background-image: url('./img/background.png');
@@ -29,7 +38,7 @@ body{
     height: 40%;
 }
 header {
-    background: url(./img/top_banner_office.png) 0 bottom repeat-x;;
+    background: url(./img/top_banner_office.png) 0 bottom repeat-x;
     width: 100%;
     height: 100%;
     background-size: 100%;
@@ -55,7 +64,9 @@ input{
     display: block;
 }
 form{
+    width: 100%;
     float: right;
+    border: 1px solid black;
 }
 .logo{
     display: block;
@@ -93,5 +104,46 @@ form{
   background-color:  white; 
   width: 100%;
   height:45%;
+}
+.login{
+        float: right;
+       background-color: white;
+        width: 50%;
+        height: 40%;
+        border: 1px solid blue;
+}
+
+.GO-button{
+    background:url('./img/GO-button-background.png');
+    background-size: cover;
+    border: none;
+    width: 90%;
+    height: 60px;
+    cursor: pointer;
+    color: transparent;
+    vertical-align: bottom;/*add vertical align bottom*/
+}
+.text-inputs {
+    width: 50%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.GO {
+    width: 39%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.lock{
+    float: left;
+    background:url('./img/lock.png') 0 bottom repeat-x;
+    width: 11%;
+    height: 60px;
+    }
+input[type="email"],input[type="password"], textarea {
+
+  background-color : #CCCCCC; 
+
 }
 }
