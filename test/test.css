@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+}
+body{
+    background-image: url('http://res.cloudinary.com/dfjqt1guk/image/upload/v1490375999/background_vqryve.png');
+    height: 100%;
+    margin: 0 auto;
+}
+.banner{
+    margin :0px auto;
+    width: 100%;
+}
+.container{
+    background-image: url('http://res.cloudinary.com/dfjqt1guk/image/upload/v1490376007/inner-background_zcrxzk.png');
+    margin :0px auto;
+    width:65.3%;
+    height: 100%;
+    padding-left: 2.84%;
+    padding-right: 2.84%;
+}
+header {
+    margin :0px auto;
+    background: url('http://res.cloudinary.com/dfjqt1guk/image/upload/v1490376022/top_banner_office_ukpk6k.png') 0 bottom repeat-x;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    padding-bottom: 50%;
+}
