@@ -44,7 +44,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 /* office si floor trebuie sa le rescriu cu mixins, sunt identice
 inafara de background*/
-.floor {
+.floor1 {
     margin :0px auto;
     background: url('./img/top_banner_floor.png') 0 bottom repeat-x;
     width: 100%;
@@ -52,7 +52,7 @@ inafara de background*/
     background-size: 100%;
     padding-bottom: 50%;
 }
-.office{
+.office1{
     margin :0px auto;
     background: url('./img/top_banner_office.png') 0 bottom repeat-x;
     width: 100%;

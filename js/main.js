@@ -27,10 +27,10 @@ function plusDivs(n,type) {
 }
 
 function showDivs(n, type) {
-  var i, first_run = true;
+  var i, first_run = true,copy;
   var x = [];
-  x.push(document.getElementsByClassName("office"));
-  x.push(document.getElementsByClassName("floor"));
+  x.push(document.getElementsByClassName("office1"));
+  x.push(document.getElementsByClassName("floor1"));
   console.log('I am fired on click');
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
@@ -40,18 +40,20 @@ function showDivs(n, type) {
   x[slideIndex-1][0].style.display = "block";
     if(type == 'left')
     {
-        x[slideIndex-1][0].className += " w3-animate-left";
+        x[slideIndex-1][0].className = x[slideIndex-1][0].className.substring(0, x[slideIndex-1][0].className .indexOf('1')) + "1 w3-animate-left";
     }
     else
-        x[slideIndex-1][0].className += " w3-animate-right";
+    {
+        x[slideIndex-1][0].className = x[slideIndex-1][0].className.substring(0, x[slideIndex-1][0].className .indexOf('1')) + "1 w3-animate-right";
+    }
   console.log(type);
 }
 
 function showDivsFirstRun(n) {
   var i, first_run = true;
   var x = [];
-  x.push(document.getElementsByClassName("office"));
-  x.push(document.getElementsByClassName("floor"));
+  x.push(document.getElementsByClassName("office1"));
+  x.push(document.getElementsByClassName("floor1"));
   for (i = 0; i < x.length; i++) {
     x[i][0].style.display = "none";
   }
