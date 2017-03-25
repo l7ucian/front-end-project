@@ -13,7 +13,7 @@ app.controller('MainController',function($scope, $http){
 	
 	$http.get('http://localhost/front-end-project/data.json').then(function success(response) {
     	$scope.content = response.data;
-		console.log($scope.content);
+		console.log($scope.content.text);
   }, function error(response) {
  		console.log('something bad happened',response);
   })
@@ -31,7 +31,6 @@ function showDivs(n, type) {
   var x = [];
   x.push(document.getElementsByClassName("office1"));
   x.push(document.getElementsByClassName("floor1"));
-  console.log('I am fired on click');
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
@@ -46,7 +45,6 @@ function showDivs(n, type) {
     {
         x[slideIndex-1][0].className = x[slideIndex-1][0].className.substring(0, x[slideIndex-1][0].className .indexOf('1')) + "1 w3-animate-right";
     }
-  console.log(type);
 }
 
 function showDivsFirstRun(n) {
