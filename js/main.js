@@ -20,22 +20,40 @@ app.controller('MainController',function($scope, $http){
 });
 
 var slideIndex = 1;
-showDivs(slideIndex);
+showDivsFirstRun(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function plusDivs(n,type) {
+  showDivs(slideIndex += n, type);
 }
 
-function showDivs(n) {
-  var i;
+function showDivs(n, type) {
+  var i, first_run = true;
   var x = [];
   x.push(document.getElementsByClassName("office"));
   x.push(document.getElementsByClassName("floor"));
-  console.log(x);
+  console.log('I am fired on click');
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i][0].style.display = "none";  
+    x[i][0].style.display = "none";
   }
-  x[slideIndex-1][0].style.display = "block";  
+  x[slideIndex-1][0].style.display = "block";
+    if(type == 'left')
+    {
+        x[slideIndex-1][0].className += " w3-animate-left";
+    }
+    else
+        x[slideIndex-1][0].className += " w3-animate-right";
+  console.log(type);
+}
+
+function showDivsFirstRun(n) {
+  var i, first_run = true;
+  var x = [];
+  x.push(document.getElementsByClassName("office"));
+  x.push(document.getElementsByClassName("floor"));
+  for (i = 0; i < x.length; i++) {
+    x[i][0].style.display = "none";
+  }
+  x[slideIndex-1][0].style.display = "block";
 }

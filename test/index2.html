@@ -15,9 +15,24 @@
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+<!--
+<div id="slider" class="slide-in">
+    <ul>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+        <li>Dolor</li>
+    </ul>
+</div>
+
+<button id="toggle" style="position:absolute; top: 320px;">Toggle</button>
+-->
+<div class="wrapper">
+    <img id="slide" src="http://lorempixel.com/output/cats-q-c-100-100-4.jpg" />
+</div>
 
 <script>
-var slideIndex = 1;
+/*
+    var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -37,6 +52,16 @@ function showDivs(n) {
   }
   x[slideIndex-1][0].style.display = "block";  
 }
+    
+var $slider = document.getElementById('slider');
+var $toggle = document.getElementById('toggle');
+
+console.log($slider, $toggle);
+$toggle.addEventListener('click', function() {
+    var isOpen = $slider.classList.contains('slide-in');
+
+    $slider.setAttribute('class', isOpen ? 'slide-out' : 'slide-in'); 
+});*/
 </script>
 </div>
 </body>
