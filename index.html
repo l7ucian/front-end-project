@@ -8,16 +8,17 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
-
 <div class="container" ng-controller="MainController">
  <div class="banner">
-
-  <div class="login" ng-show=false>
-   <form ng-submit="onSubmit(theForm.$valid)"
+ <div class="register"><a href="#login">Login</a> or <a href="register">Register</a> to enjoy the full benefits of our site
+ </div>
+   <form ng-show=true ng-submit="onSubmit(theForm.$valid)"
          name="theForm"
          novalidate="novalidate">
-         <div class="lock"></div>
-         <div class="text-inputs">
+       <table>
+          <tr>
+            <td><div class="lock"></div></td>
+            <td>
        <div class="form-group">
        <input type="email" 
               placeholder="Your e-mail" 
@@ -26,7 +27,8 @@
               ng-model-options="{updateOn: 'blur'}"
               required="required"
               ng-minlength="5"
-              ng-model="form.email">
+              ng-model="form.email"
+              size="15">
        </div>
        <div class="form-group">
        <input type="password"
@@ -36,16 +38,21 @@
               ng-model-options="{updateOn: 'blur'}"
               required="required"
               ng-minlength="5"
-              ng-model="form.password">
-       </div>
-       </div>
+              ng-model="form.password"
+              size="15">
+            </div>
+            </td>
+            <td>
        <div class="GO">
        <div class="form-group">
         <input class="GO-button" type="Submit" value="GO">
        </div>  
-       </div>  
+       </div>  </td>
+          </tr>
+        </table>
+
+
    </form>
-   </div>
 
    <header class="office1">    
        <div class="banner-text"><p class="text-office"><span class="the-office">the</span>office</p></div>

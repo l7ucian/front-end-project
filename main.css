@@ -14,6 +14,10 @@ body{
 * {
     box-sizing: border-box;
 }
+a{
+        text-decoration: none;
+}
+
 /*IE and FF compatibility for placeholders*/
 input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
@@ -79,12 +83,9 @@ inafara de background*/
 input{
     display: block;
 }
-form{
-    width: 100%;
-    float: right;
-    <!--border: 1px solid black;-->
-}
+
 .logo{
+    box-sizing: border-box;
     display: block;
     margin-top: 10%;
     margin-bottom: 5%;
@@ -200,64 +201,72 @@ float: left;
     font-size: 10px !important;
     float: left;
 }
-.login{
-        float: right;
-       background-color: white;
-        width: 50%;
-        height: 28%;
-        <!--border: 1px solid blue;-->
+form{
+   padding: 10px;
+   clear: right; 
+   float: right;
+   background-color: white;
+   width: 40%;
+   height: 28%;
+   <!--border: 1px solid blue;-->
 }
 
 .GO-button{
     background:url('./img/GO-button-background.png');
     background-size: cover;
     border: none;
-    width: 90%;
+    width: 100%;
     height: 60px;
     cursor: pointer;
     color: transparent;
     vertical-align: bottom;/*add vertical align bottom*/
 }
-.text-inputs {
-    width: 50%;
-    float: left;
-    padding: 15px;
-    <!--border: 1px solid red;-->
-}
+
 .GO {
-    width: 39%;
+    width: 100%;
     float: left;
-    padding: 15px;
+    <!--padding: 15px;-->
     <!--border: 1px solid red;-->
 }
 .lock{
-    float: left;
     background:url('./img/lock.png') 0 bottom repeat-x;
-    width: 11%;
+    width: 43px;
     height: 60px;
+    padding-right: 5px;
     }
 input[type="email"],input[type="password"], textarea {
-
+  size="10";
   background-color : #CCCCCC; 
 
 }
-    .more{
-        font-family: Arial;
-        color: #53b8c4;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-        text-align: center;
-    }
-    .article, .inner-container p, .small-button-container p, .slider-text{
-        display: block;
-        font-family: NeoSans;
-        color: #666666;
-        font-size: 30px;
-        font-weight: 400;
-        margin: 0 !important;
+.more{
+    font-family: Arial;
+    color: #53b8c4;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
 }
-
+.article, .inner-container p, .small-button-container p, .slider-text{
+    display: block;
+    font-family: NeoSans;
+    color: #666666;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 !important;
+}
+.register{
+    float: right;
+    background: url('img/register_background.png') 0 bottom repeat-x;
+    width: 40%;
+    height: 15%;
+    padding: 3px;
+    background-size: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 10px;
+}
 .text-floor, .text-office{
 font-family: NeoSans;
 color: #ffffff;
