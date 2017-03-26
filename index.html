@@ -10,9 +10,9 @@
 <body>
 <div class="container" ng-controller="MainController">
  <div class="banner">
- <div class="register"><a href="#login">Login</a> or <a href="register">Register</a> to enjoy the full benefits of our site
+ <div class="register"><a href="#login" ng-model="checked" ng-click="showlogin()">Login</a> or <a href="#register" ng-model="checked" ng-click="showlogin()">Register</a> to enjoy the full benefits of our site
  </div>
-   <form ng-show=true ng-submit="onSubmit(theForm.$valid)"
+   <form ng-hide= "checked" ng-submit="onSubmit(theForm.$valid)"
          name="theForm"
          novalidate="novalidate">
        <table>
@@ -50,8 +50,6 @@
        </div>  </td>
           </tr>
         </table>
-
-
    </form>
 
    <header class="office1">    
@@ -61,89 +59,177 @@
        <div class="banner-text"><p class="text-office"><span class="the-office">the</span>floor</p></div>
    </header>
    <div class="top-strip" >
-        <img class="left-arrow" src="./img/left_arrow_top_banner.png" onclick="plusDivs(-1,'left')">
-        <img class="right-arrow" src="./img/right_arrow_top_banner.png" onclick="plusDivs(1,'right')">
+        <img class="left-arrow" src="./img/left_arrow_top_banner.png" onclick="plusDivs(-1,'left', 'office1', 'floor1')">
+        <img class="right-arrow" src="./img/right_arrow_top_banner.png" onclick="plusDivs(1,'right', 'office1', 'floor1')">
    </div>
  </div>
+    
     <img class="logo" src="./img/full-logo.png">
-    
-<div class="button-group">
-    <div class="button-container">
-        <div class="big-button"><p>01</p></div>
+   
+    <table>
+  <tr>
+    <td class="cellpadding">
+        <div class="button-container" 
+             ng-click="big_button_action(1)">
+        <div class="big-button" ng-style="myStyle1"><p>01</p></div>
         <div class="inner-container">
         <p>{{content.text[0]}}</p>
         <div class="plus">
-            <img src="img/plus_sign.png">
+            <img id="1" src="img/plus_sign.png">
         </div>
         </div>
-    </div>
-    
-    <div class="button-container1">
-    <div class="big-button"><p>02</p></div>
-    <div class="inner-container">
-        <p>{{content.text[0]}}</p>
-        <div class="plus">
-            <img src="img/plus_sign.png">
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="button-group">
-    <div class="button-container">
-        <div class="big-button"><p>03</p></div>
+    </div>  
+    </td>
+    <td class="cellpadding">
+        <div class="button-container" ng-click="big_button_action(2)">
+        <div class="big-button" ng-style="myStyle2"><p>02</p></div>
         <div class="inner-container">
         <p>{{content.text[0]}}</p>
-        <div class="plus">
+        <div id="2" class="plus">
+            <img src="img/plus_sign.png">
+        </div>
+    </div>
+</div>  
+    </td>
+  </tr>
+        
+    <tr class="row1">
+    <td class="cell1">
+        <div class="button-container-clicked">
+            <p class="inner-container-clicked">{{content.text[0]}}</p>
+        </div>  
+    </td>
+    <td class="cell2">
+        <div class="button-container-clicked">
+            <p class="inner-container-clicked">{{content.text[0]}}</p>
+        </div>    
+    </td>
+  </tr>
+        
+  <tr>
+    <td class="cellpadding">    
+        <div class="button-container" ng-click="big_button_action(3)">
+        <div class="big-button" ng-style="myStyle3"><p>03</p></div>
+        <div class="inner-container">
+        <p>{{content.text[0]}}</p>
+        <div id="3" class="plus">
             <img src="img/plus_sign.png">
         </div>
         </div>
-    </div>
-<div class="button-container1">
-<div class="big-button"><p>04</p></div>
+        </div>
+      </td>
+    <td class="cellpadding">
+    <div class="button-container" ng-click="big_button_action(4)">
+    <div class="big-button" ng-style="myStyle4"><p>04</p></div>
     <div class="inner-container">
     <p>{{content.text[0]}}</p>
-    <div class="plus">
+    <div id="4" class="plus">
         <img src="img/plus_sign.png">
     </div>
     </div>
-</div>
-</div>
+</div>  
+    </td>
+  </tr>
+    <tr class="row2">
+    <td class="cell3">
+        <div class="button-container-clicked">
+            <p class="inner-container-clicked">{{content.text[0]}}</p>
+        </div>  
+    </td>
+    <td class="cell4">
+        <div class="button-container-clicked">
+            <p class="inner-container-clicked">{{content.text[0]}}</p>
+        </div>    
+    </td>
+  </tr>
+        
+</table>
 
-<div class="small-button-group">
-    <div class="small-button-container">
+<table class="small-table">
+  <tr>
+    <td>
+        <div class="small-button-container">
         <p>{{content.text[1]}}</p>
         <div class="small-button"><img src="img/white_plus.png"></div>
     </div>
-    <div class="small-button-container">
+    </td>
+    <td>
+        <div class="small-button-container">
         <p>{{content.text[2]}}</p>
         <div class="small-button"><img src="img/white_plus.png"></div>
-    </div>
-</div>
-
-<div class="small-button-group">
-    <div class="small-button-container">
+    </div>  
+    </td>
+    <td>
+        <div class="small-button-container">
         <p>{{content.text[3]}}</p>
         <div class="small-button"><img src="img/white_plus.png"></div>
-    </div>
-    <div class="small-button-container">
+    </div>  
+    </td>
+    <td>
+        <div class="small-button-container">
         <p>{{content.text[4]}}</p>
         <div class="small-button"><img src="img/white_plus.png"></div>
+    </div>  
+    </td>
+  </tr>
+</table>
+
+    <table class="small-table" ng-hide = "small" >
+  <tr>
+    <td>
+        <div class="small-button-container">
+        <p>{{content.text[1]}}</p>
+        <div class="small-button"><img src="img/white_plus.png"></div>
     </div>
-</div>
-   
-    <p class="more">view more</p>
+    </td>
+    <td>
+        <div class="small-button-container">
+        <p>{{content.text[2]}}</p>
+        <div class="small-button"><img src="img/white_plus.png"></div>
+    </div>  
+    </td>
+    <td>
+        <div class="small-button-container">
+        <p>{{content.text[3]}}</p>
+        <div class="small-button"><img src="img/white_plus.png"></div>
+    </div>  
+    </td>
+    <td>
+        <div class="small-button-container">
+        <p>{{content.text[4]}}</p>
+        <div class="small-button"><img src="img/white_plus.png"></div>
+    </div>  
+    </td>
+  </tr>
+</table>
+
+    <p class="more" ng-model="small" ng-click="showbuttons()">{{content.text[6]}}</p>
     
 <div class="slider">
     <div class="slider-left-corner"></div>
     <div class="slider-content">
         <p class="article">Article about one client</p>
-        <div class="slider-pic"></div>
-        <div class="slider-text">{{content.text[0]}}</div>    
+        <table>
+            <tr>
+                <td width="30%">        
+                    <div class="office-pic1"></div>
+                    <div class="floor-pic1"></div>
+                </td>
+                <td width="70%">        
+                    <div class="slider-text">{{content.text[0]}}</div>    
+                </td>
+            </tr>
+        </table>
     </div>
     <div class="slider-right-corner"></div>
 </div>
 
+            
+<div>       
+    <img src="./img/left_arrow_top_banner.png" onclick="plusDivs(-1,'left', 'office-pic1', 'floor-pic1')">
+    <img src="./img/right_arrow_top_banner.png" onclick="plusDivs(1,'right', 'office-pic1', 'floor-pic1')">
+</div> 
+    
 </div>
 <script src="./js/node_modules/angular/angular.min.js"></script>
 <script src="./js/node_modules/angular-shims-placeholder/dist/angular-shims-placeholder.min.js"></script>

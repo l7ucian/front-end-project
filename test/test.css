@@ -37,8 +37,7 @@ body{
 
 /*transform*/
 #slider {
-        display: block;
-
+    display: block;
     position: absolute;
     width: 100px;
     height: 100px;
@@ -48,12 +47,13 @@ body{
 }
 
 .slide-in {
-    display: none;
+    display: block;
     animation: slide-in 0.5s forwards;
     -webkit-animation: slide-in 0.5s forwards;
 }
 
 .slide-out {
+    display: none;
     animation: slide-out 0.5s forwards;
     -webkit-animation: slide-out 0.5s forwards;
 }
