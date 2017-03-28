@@ -254,13 +254,16 @@ input[type="email"],input[type="password"], textarea {
     margin: 0 auto;
     padding-top: 5%;
 }
-.article, .inner-container p, .small-button-container p, .slider-text, .inner-container-clicked{
+.article, .inner-container p, .small-button-container p, .slider-text, .inner-container-clicked, .hidden-text-left, .hidden-text-right, .hidden-text-left-low, .hidden-text-right-low{
     display: block;
     font-family: NeoSans;
     color: #666666 !important;
     font-size: 30px;
     font-weight: 400;
     margin: 0 !important;
+}
+.hidden-text-left, .hidden-text-right, .hidden-text-left-low, .hidden-text-right-low{
+    font-size: 0.6em;
 }
 .more{
     border-bottom: 2px solid;
@@ -282,7 +285,7 @@ input[type="email"],input[type="password"], textarea {
 .text-floor, .text-office{
 font-family: NeoSans;
 color: #ffffff;
-font-size: 65px;
+font-size: 4.0625em;
 font-weight: 700;
 line-height: 16px;
 }
@@ -300,6 +303,7 @@ line-height: 16px;
     margin-top: 54px;
 }
 .cell1, .cell2, .cell3, .cell4{
+    word-wrap: break-word;
     float: right;
     visibility: hidden;
 }
@@ -313,6 +317,43 @@ line-height: 16px;
 .cellpadding {
    padding-left: 5px;
    padding-right: 5px;
+}
+.hidden-text-container{
+    display: none;
+    width: 100%;
+}
+.hidden-text-left, .hidden-text-right{
+    visibility: hidden;
+    word-wrap: break-word;
+    float: left;
+    width: 49%;
+}
+.hidden-text-right{
+    word-wrap: break-word;/*life saver*/
+    float: right;
+}
+.hidden-text-inner{
+    width: 70%;
+    float: right;
+}
+/*low*/
+.hidden-text-container-low{
+    display: none;
+    width: 100%;
+}
+.hidden-text-left-low, .hidden-text-right-low{
+    visibility: hidden;
+    word-wrap: break-word;
+    float: left;
+    width: 49%;
+}
+.hidden-text-right-low{
+    word-wrap: break-word;/*life saver*/
+    float: right;
+}
+.hidden-text-inner-low{
+    width: 70%;
+    float: right;
 }
 @media only screen and (max-width: 760px),
     (min-device-width: 320px) and (max-device-width: 1024px){ 

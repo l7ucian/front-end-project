@@ -40,17 +40,17 @@ app.controller('MainController',function($scope, $http){
             if(toggle1 == true)
                 {
             $scope.myStyle1={'background-color':'black'};
-            var row = document.querySelector('.row1');
+            var row = document.querySelector('.hidden-text-container');
             row.style.display = 'block';
-            var cell = document.querySelector('.cell1');
+            var cell = document.querySelector('.hidden-text-left');
             cell.style.visibility = 'visible';
                 }
             else
                 {
             $scope.myStyle1={'background-color':'#53b8c4'};
-            var row = document.querySelector('.row1');
+            var row = document.querySelector('.hidden-text-container');
             row.style.display = 'none';
-            var cell = document.querySelector('.cell1');
+            var cell = document.querySelector('.hidden-text-left');
             cell.style.visibility = 'hidden';
                 }
             toggle1 = !toggle1;
@@ -59,17 +59,17 @@ app.controller('MainController',function($scope, $http){
             if(toggle2 == true)
                 {
             $scope.myStyle2={'background-color':'black'};
-            var row = document.querySelector('.row1');
+            var row = document.querySelector('.hidden-text-container');
             row.style.display = 'block';
-            var cell = document.querySelector('.cell2');
+            var cell = document.querySelector('.hidden-text-right');
             cell.style.visibility = 'visible';
                 }
             else
                 {
             $scope.myStyle2={'background-color':'#53b8c4'};
-            var row = document.querySelector('.row1');
+            var row = document.querySelector('.hidden-text-container');
             row.style.display = 'none';
-            var cell = document.querySelector('.cell2');
+            var cell = document.querySelector('.hidden-text-right');
             cell.style.visibility = 'hidden';
                 }
             toggle2 = !toggle2;
@@ -79,17 +79,17 @@ app.controller('MainController',function($scope, $http){
                        if(toggle3 == true)
                 {
             $scope.myStyle3={'background-color':'black'};
-            var row = document.querySelector('.row2');
+            var row = document.querySelector('.hidden-text-container-low');
             row.style.display = 'block';
-            var cell = document.querySelector('.cell3');
+            var cell = document.querySelector('.hidden-text-left-low');
             cell.style.visibility = 'visible';
                 }
             else
                 {
             $scope.myStyle3={'background-color':'#53b8c4'};
-            var row = document.querySelector('.row2');
+            var row = document.querySelector('.hidden-text-container-low');
             row.style.display = 'none';
-            var cell = document.querySelector('.cell3');
+            var cell = document.querySelector('.hidden-text-left-low');
             cell.style.visibility = 'hidden';
                 }
             toggle3 = !toggle3; 
@@ -99,17 +99,17 @@ app.controller('MainController',function($scope, $http){
                        if(toggle4 == true)
                 {
             $scope.myStyle4={'background-color':'black'};
-            var row = document.querySelector('.row2');
+            var row = document.querySelector('.hidden-text-container-low');
             row.style.display = 'block';
-            var cell = document.querySelector('.cell4');
+            var cell = document.querySelector('.hidden-text-right-low');
             cell.style.visibility = 'visible';
                 }
             else
                 {
             $scope.myStyle4={'background-color':'#53b8c4'};
-            var row = document.querySelector('.row2');
+            var row = document.querySelector('.hidden-text-container-low');
             row.style.display = 'none';
-            var cell = document.querySelector('.cell4');
+            var cell = document.querySelector('.hidden-text-right-low');
             cell.style.visibility = 'hidden';  
                 }
             toggle4 = !toggle4; 
