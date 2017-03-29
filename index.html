@@ -63,13 +63,12 @@
         <img class="right-arrow" src="./img/right_arrow_top_banner.png" onclick="plusDivs(1,'right', 'office1', 'floor1')">
    </div>
  </div>
-    
-    <img class="logo" src="./img/full-logo.png">
-   
-    <table>
-  <tr>
-    <td class="cellpadding">
-        <div class="button-container" 
+   <div class="logo">
+        <img class="logo pic" src="./img/full-logo.png">
+   </div>
+      
+<div class="row">
+        <div class="col1" 
              ng-click="big_button_action(1)">
         <div class="big-button" ng-style="myStyle1"><p>01</p></div>
         <div class="inner-container">
@@ -78,10 +77,11 @@
             <img id="1" src="img/plus_sign.png">
         </div>
         </div>
+        <div class="hidden-text-left">
+        {{content.text[5]}}
+        </div>
     </div>  
-    </td>
-    <td class="cellpadding">
-        <div class="button-container" ng-click="big_button_action(2)">
+        <div class="col1" ng-click="big_button_action(2)">
         <div class="big-button" ng-style="myStyle2"><p>02</p></div>
         <div class="inner-container">
         <p>{{content.text[0]}}</p>
@@ -89,22 +89,14 @@
             <img src="img/plus_sign.png">
         </div>
     </div>
+    <div class="hidden-text-right">
+    {{content.text[0]}}  
+    </div>
+</div>
 </div>  
-    </td>
-  </tr>
-      </table>
-      <div class="hidden-text-container">
-          <div class="hidden-text-left">
-           <div class="hidden-text-inner">{{content.text[0]}}</div>
-           </div>
-          <div class="hidden-text-right">
-            {{content.text[5]}}  
-          </div>
-      </div>  
-<table>
-  <tr>
-    <td class="cellpadding">    
-        <div class="button-container" ng-click="big_button_action(3)">
+    
+<div class="row">  
+        <div class="col1" ng-click="big_button_action(3)">
         <div class="big-button" ng-style="myStyle3"><p>03</p></div>
         <div class="inner-container">
         <p>{{content.text[0]}}</p>
@@ -112,10 +104,11 @@
             <img src="img/plus_sign.png">
         </div>
         </div>
+        <div class="hidden-text-left-low">
+        {{content.text[0]}}
         </div>
-      </td>
-    <td class="cellpadding">
-    <div class="button-container" ng-click="big_button_action(4)">
+        </div>
+    <div class="col1" ng-click="big_button_action(4)">
     <div class="big-button" ng-style="myStyle4"><p>04</p></div>
     <div class="inner-container">
     <p>{{content.text[0]}}</p>
@@ -123,19 +116,11 @@
         <img src="img/plus_sign.png">
     </div>
     </div>
-</div>  
-    </td>
-  </tr>
-</table>
-    <div class="hidden-text-container-low">
-          <div class="hidden-text-left-low">
-           <div class="hidden-text-inner-low">{{content.text[0]}}</div>
-           </div>
-          <div class="hidden-text-right-low">
-            {{content.text[5]}}  
-          </div>
-      </div>      
-
+     <div class="hidden-text-right-low">
+    {{content.text[5]}}  
+    </div>
+</div>
+</div>        
 
 <table class="small-table">
   <tr>

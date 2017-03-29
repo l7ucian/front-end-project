@@ -86,15 +86,18 @@ input{
 }
 
 .logo{
-    box-sizing: border-box;
-    display: block;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    height: 3%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    width:75%;
 }
-
+.logo.pic{
+       width:100%;
+        margin: 0 auto;
+}
+/*big button*/
+.row{
+    overflow: auto;
+    margin-bottom: 1.5em;
+}
 .big-button, .inner-container{
   display: table;
   width:30%;
@@ -119,18 +122,17 @@ input{
 
 .inner-container{
     width:70%;
-    background-color: inherit;
+    background-color:  white;
 }
 .inner-container p{
     float: left;
     font-size: 10px !important;
     width: 90%;
 }
-.button-container{
-  width:100%;
+.col1{
+  width:49%;
   height:12.20%;
   float:left;
-  background-color:  white;
 }
 .button-container-clicked{
   width:100%;
@@ -138,7 +140,7 @@ input{
   float:left;
 }
 
-.button-container p, .button-container .plus{
+.col1 p, .col1 .plus{
     text-align: center;
     display: table-cell;
 	vertical-align: middle;
@@ -302,63 +304,17 @@ line-height: 16px;
     position: absolute;
     margin-top: 54px;
 }
-.cell1, .cell2, .cell3, .cell4{
+
+.hidden-text-left, .hidden-text-right, .hidden-text-left-low, .hidden-text-right-low{
+    display: none;
     word-wrap: break-word;
     float: right;
-    visibility: hidden;
-}
-.row1, .row2{
-    display: none;
+    width: 70%;
 }
 
-.small-table{
-   padding-top: 5%; 
-}
-.cellpadding {
-   padding-left: 5px;
-   padding-right: 5px;
-}
-.hidden-text-container{
-    display: none;
-    width: 100%;
-}
-.hidden-text-left, .hidden-text-right{
-    visibility: hidden;
-    word-wrap: break-word;
-    float: left;
-    width: 49%;
-}
-.hidden-text-right{
-    word-wrap: break-word;/*life saver*/
-    float: right;
-}
-.hidden-text-inner{
-    width: 70%;
-    float: right;
-}
-/*low*/
-.hidden-text-container-low{
-    display: none;
-    width: 100%;
-}
-.hidden-text-left-low, .hidden-text-right-low{
-    visibility: hidden;
-    word-wrap: break-word;
-    float: left;
-    width: 49%;
-}
-.hidden-text-right-low{
-    word-wrap: break-word;/*life saver*/
-    float: right;
-}
-.hidden-text-inner-low{
-    width: 70%;
-    float: right;
-}
 @media only screen and (max-width: 760px),
     (min-device-width: 320px) and (max-device-width: 1024px){ 
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
+        .col1{
+            width:100%;
+        }
 }
