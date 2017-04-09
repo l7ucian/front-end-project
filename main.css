@@ -67,26 +67,34 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .top-strip{
      background: url(./img/strip_top_banner.png);
      margin: auto;
+     overflow: auto;
+}
+.left-arr , .right-arr{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    float: left;
+    width:5%;
+}
+.left-arr{
+    margin-left: 90%;
+}
+.right-arr{
+    float: right;
+}
+.left-arrow, .right-arrow{
+    display: inline-block;
+    max-width: 100%;
 }
 
-.left-arrow{
-    display: inline-block;
-    padding-top: 1%;
-    padding-left: 89%;
-    height: 70%;
-}
 .right-arrow{
-    display: inline-block;
-    padding-top: 1%;
     padding-left: 2%;
-    height: 70%;
 }
 input{
     display: block;
 }
 
 .logo{
-    margin: 0 auto;
+    margin: 5% auto;
     width:75%;
 }
 .logo.pic{
@@ -316,5 +324,9 @@ line-height: 16px;
     (min-device-width: 320px) and (max-device-width: 1024px){ 
         .col1{
             width:100%;
+            margin-bottom: 1%;
+        }
+        .row{
+            margin: 0;
         }
 }
